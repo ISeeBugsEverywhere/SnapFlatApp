@@ -8,7 +8,7 @@ class SFA_window(QtWidgets.QMainWindow):
         self.ui.setupUi(self)
         self.__setup_UI()
         pass
-
+    
     def __setup_UI(self):
         picture = QtGui.QPixmap('GUI/Icons/snap.png')
         scene = QtWidgets.QGraphicsScene()
@@ -16,4 +16,9 @@ class SFA_window(QtWidgets.QMainWindow):
         scene.addItem(QtWidgets.QGraphicsPixmapItem(picture))
         self.ui.iconLabel.setScene(scene)
         #self.ui.iconLabel.fitInView(scene.sceneRect(), QtCore.Qt.KeepAspectRatio)
+        picture = QtGui.QPixmap('GUI/Icons/flatpak.jpeg')
+        scene = QtWidgets.QGraphicsScene()
+        scene.setSceneRect(0, 0, 64, 64)
+        scene.addItem(QtWidgets.QGraphicsPixmapItem(picture))
+        self.ui.flatpakIcon.setScene(scene)
         pass
